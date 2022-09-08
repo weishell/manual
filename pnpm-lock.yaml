@@ -2,11 +2,15 @@ lockfileVersion: 5.3
 
 specifiers:
   '@vuepress/client': ^2.0.0-beta.51
+  '@vuepress/plugin-search': ^2.0.0-beta.51
+  markdown-it-anchor: ^8.6.4
   vue: ^3.2.38
   vuepress: ^2.0.0-beta.51
 
 devDependencies:
   '@vuepress/client': 2.0.0-beta.51
+  '@vuepress/plugin-search': 2.0.0-beta.51
+  markdown-it-anchor: 8.6.4
   vue: 3.2.38
   vuepress: 2.0.0-beta.51_b16ae4cd540e4a0864fce4166a6dee4d
 
@@ -450,6 +454,20 @@ packages:
     dependencies:
       '@vuepress/core': 2.0.0-beta.51
       prismjs: 1.29.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@vuepress/plugin-search/2.0.0-beta.51:
+    resolution: {integrity: sha512-LUKD1WOhesfbjRmy+3wPz27ZOat5sEL7nRVFrmoZNGjqGoUSuh/AFnd04z2utVEoceeuWWOluVmpoYKhxJVMFQ==}
+    dependencies:
+      '@vuepress/client': 2.0.0-beta.51
+      '@vuepress/core': 2.0.0-beta.51
+      '@vuepress/shared': 2.0.0-beta.51
+      '@vuepress/utils': 2.0.0-beta.51
+      chokidar: 3.5.3
+      vue: 3.2.38
+      vue-router: 4.1.5_vue@3.2.38
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1400,6 +1418,13 @@ packages:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
       sourcemap-codec: 1.4.8
+    dev: true
+
+  /markdown-it-anchor/8.6.4:
+    resolution: {integrity: sha512-Ul4YVYZNxMJYALpKtu+ZRdrryYt/GlQ5CK+4l1bp/gWXOG2QWElt6AqF3Mih/wfUKdZbNAZVXGR73/n6U/8img==}
+    peerDependencies:
+      '@types/markdown-it': '*'
+      markdown-it: '*'
     dev: true
 
   /markdown-it-anchor/8.6.4_203ea4fed94a963ea5da6bb0985d1ff7:

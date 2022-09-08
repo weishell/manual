@@ -1,6 +1,8 @@
 {
 	"devDependencies": {
 		"@vuepress/client": "^2.0.0-beta.51",
+		"@vuepress/plugin-search": "^2.0.0-beta.51",
+		"markdown-it-anchor": "^8.6.4",
 		"vue": "^3.2.38",
 		"vuepress": "^2.0.0-beta.51"
 	}
