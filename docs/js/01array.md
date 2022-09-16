@@ -58,6 +58,17 @@ console.log(cat1.__proto__)
 ```js
 Object.prototype.toString.call(undefined) ; // [object Undefined]
 ```
++ 当检测 Array 实例时，Array.isArray 优于 instanceof，因为 Array.isArray 能检测 iframes。
+```js
+const iframe = document.createElement('iframe');
+document.body.appendChild(iframe);
+xArray = window.frames[window.frames.length-1].Array;
+const arr = new xArray(1,2,3); // [1,2,3]
 
+// 正确检查 Array
+Array.isArray(arr);  // true
+// Considered harmful, because doesn't work through iframes
+arr instanceof Array; // false
+```
 
 ---
