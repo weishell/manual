@@ -76,6 +76,10 @@ export default defineUserConfig({
 				text: 'js',
 				children: [
 					{ text: 'js模块', link: '/js/README.md' },
+					{ text: '数组', link: '/js/01array.md' },
+					{ text: '对象', link: '/js/02object.md' },
+					{ text: '性能优化', link: '/js/03performance.md' },
+					
 				],
 				collapsible: true,
 			}],

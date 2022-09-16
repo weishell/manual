@@ -90,8 +90,8 @@ html.dark body{
 }
 
 .dark {
-	p,h1,h2,h3,h4,h5,h6,a,li{
-	color:#adbac7
+	p,h1,h2,h3,h4,h5,h6,a,li,td,em strong{
+	color:#adbac7 !important
 	}
 }
 
@@ -120,16 +120,15 @@ strong{
 	font-size:17px
 }
 
-// em strong{
-// 	font-style :normal;
-// 	color:black !important;
-// 	border-bottom: 2px dashed orange !important;
-// 	// background #FFF !important;
-// 	border-radius: 0 !important;
-// 	//background #1AC5EA;
-// 	padding:4px;
-// 	border-radius: 4px !important
-// }
+em strong{
+	font-style :normal;
+	color:black !important;
+	border-bottom: 2px dashed red !important;
+	// background #FFF !important;
+	border-radius: 0 !important;
+	padding:4px;
+	border-radius: 4px !important
+}
 
 // h2{
 // 	margin:34px 0 !important;
@@ -210,13 +209,13 @@ div[class*="language-"]::before{
 	margin:20px 0;				
 	
 }
-// // 
-// table,tr,td,th{
-// 	border-color:orange !important;
-// }
-// thead{
-// 	color:#007AFF;
-// }
+// 
+table,tr,td,th{
+	border-color:#646cFF !important;
+}
+thead{
+	color:#646cFF;
+}
 // per[class*="language-"]{
 // 	padding:0 !important;
 // 	margin:0 !important
