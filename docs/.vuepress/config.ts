@@ -31,7 +31,8 @@ export default defineUserConfig({
 	plugins: [
 		searchPlugin({
 			maxSuggestions: 15
-		}),
+		})
+
 	],
 	theme: defaultTheme({
 		contributorsText: '来源',
