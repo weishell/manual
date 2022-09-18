@@ -15,9 +15,6 @@ bannerBrand:
   bgImage: '/bg.svg'
   heroText: vuepress-reco
   tagline: 一款基于 vuepress 个人博客。
-  buttons:
-    - { text: Guide, link: '/docs/guide/introduce' }
-    - { text: Default Style, link: '/docs/style-default-api/introduce', type: 'plain' }
 isShowTitleInHome: true
 actionText: About
 actionLink: /views/other/about
