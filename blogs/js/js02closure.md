@@ -8,7 +8,7 @@ categories:
  - js
 --- 
 
-1. 闭包例题
+### 闭包例题
 
 ::: tip 闭包
 + 在计算机科学中对闭包的定义（维基百科）：
@@ -82,3 +82,71 @@ foo = null
 
 图六：<img src='/img/0006.png'/>
 
+
+### 闭包内存泄漏
+
++ 如果不需要的闭包不进行处理，那么会一直占据内存
++ 这里回收一半，可以清楚看到内存回收
++ GC回收不是实时的，因为自身也需要耗费一定的性能
+```js
+function createFnArray() {
+  // var arr = [1, 1, 1, 1, 1, 1, 1, 1,1, 1,1, 1,1 ]
+  // 占据的空间是4M x 100 + 其他的内存 = 400M+
+  // 1 -> number -> 8byte -> 8M
+  // js: 10 3.14 -> number -> 8byte ? js引擎
+  // 8byte => 2的64次方 => 4byte
+  // 小的数字类型, 在v8中成为Sim, 小数字 2的32次方
+  var arr = new Array(1024 * 1024).fill(1)
+  return function() {
+    console.log(arr.length)
+  }
+}
+
+
+// 100 * 100 = 10000 = 10s
+var arrayFns = []
+for (var i = 0; i < 100; i++) {
+  setTimeout(() => {
+    arrayFns.push(createFnArray())
+  }, i * 100);
+}
+
+// arrayFns = null
+setTimeout(() => {
+  for (var i = 0; i < 50; i++) {
+    setTimeout(() => {
+      arrayFns.pop()
+    }, 100 * i);
+  }
+}, 10000);
+```
+
+<img src='/img/0007.png'/>
+
+
+### 闭包中未用的变量处理方式
+
+按照规范，age应该是存在闭包之中，但是js引擎考虑到性能，大部分的js引擎会删除age属性。可以通过debugger断点查看闭包中是否还存在age
+```js
+function foo() {
+  var name = "why"
+  var age = 18
+
+  function bar() {
+    debugger
+    console.log(name)
+  }
+
+  return bar
+}
+
+var fn = foo()
+fn()
+
+
+```
+
+
++ Detect data types, simple data types and object data types
++ You can also pass a second parameter, true ensures that the result is the value of Object.prototype.toString such as [object B]B
++ If it is a custom object, get the name of the constructor

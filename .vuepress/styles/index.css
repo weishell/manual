@@ -171,3 +171,9 @@ div[class*="language-"].line-numbers-mode .line-numbers{
 	border-radius:6px;
 }
 
+p{
+	text-indent: 2em;
+}
+h3{
+	text-shadow:5px 5px 5px blueviolet
+}
