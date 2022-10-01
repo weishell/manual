@@ -112,7 +112,6 @@
  	border-bottom: 2px dashed red !important;
  	border-radius: 0 !important;
  	padding:4px;
- 	border-radius: 4px !important
  }
 	
  blockquote{
@@ -176,4 +175,10 @@ p{
 }
 h3{
 	text-shadow:5px 5px 5px blueviolet
+}
+
+p, ol, ul, table{
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	line-height: 2rem;
 }
