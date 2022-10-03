@@ -182,3 +182,11 @@ p, ol, ul, table{
 	margin-bottom: 0.5rem;
 	line-height: 2rem;
 }
+
+.custom-container.tip .custom-container-title, .custom-container.tip svg, .custom-container.info .custom-container-title, .custom-container.info svg{
+	color:lightseagreen
+}
+.custom-container.tip, .custom-container.info{
+	border-color:lightseagreen;
+	background-color: #20b2aa32;
+}
